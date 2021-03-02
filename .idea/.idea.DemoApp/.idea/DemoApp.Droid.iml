@@ -10,7 +10,7 @@
     </facet>
   </component>
   <component name="NewModuleRootManager">
-    <content url="file://$MODULE_DIR$/../../DemoApp/DemoApp.Android" />
+    <content url="file://$MODULE_DIR$/../../DemoApp/DemoApp.Droid" />
     <orderEntry type="jdk" jdkName="Android API 29 Platform" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
