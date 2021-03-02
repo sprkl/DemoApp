@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:views="http://xamarin.com/schemas/2020/toolkit"
+             x:Class="DemoApp.Posts.Details.Templates.CommentListTemplate">
+   
+    <Frame 
+        Margin="15, 10"
+        Padding="15"
+        CornerRadius="10">
+        
+        <Grid
+            RowDefinitions="70, Auto"
+            ColumnDefinitions="Auto, *">
+            
+            <views:AvatarView
+                Grid.Row="0"
+                Grid.Column="0"
+                TextColor="WhiteSmoke"
+                ColorTheme="{x:Static views:ColorTheme.Jungle}"
+                FontSize="Medium"
+                Size="50"
+                Text="{Binding Name, Converter={StaticResource TextToInitialConverter}}"
+                HorizontalOptions="Start"
+                VerticalOptions="Center"/>
+            
+            <Label 
+                Grid.Row="0"
+                Grid.Column="1"
+                Text="{Binding Name}"
+                TextColor="Gray"
+                FontSize="Medium"
+                FontAttributes="Bold"
+                HorizontalTextAlignment="Start"
+                VerticalTextAlignment="Center"
+                Margin="5"
+                LineBreakMode="TailTruncation"/>
+
+            <Frame 
+                Grid.Row="1"
+                Grid.Column="0"
+                Grid.ColumnSpan="2"
+                Padding="15"
+                HasShadow="False"
+                BorderColor="LightGray">
+                
+                <Label Text="{Binding Body}"/>
+            </Frame>
+        </Grid>
+    </Frame>
+</ContentView>

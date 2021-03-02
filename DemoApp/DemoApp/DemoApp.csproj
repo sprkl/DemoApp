@@ -1,0 +1,81 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.1</TargetFramework>
+        <LangVersion>9</LangVersion>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+        <DebugType>pdbonly</DebugType>
+        <DebugSymbols>true</DebugSymbols>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Autofac" Version="6.1.0" />
+        <PackageReference Include="Refit" Version="6.0.24" />
+        <PackageReference Include="Xamarin.CommunityToolkit" Version="1.1.0-pre1" />
+        <PackageReference Include="Xamarin.Essentials" Version="1.6.1" />
+        <PackageReference Include="Xamarin.Forms" Version="5.0.0.2012" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Update="Resources\Lang\AppResources.resx">
+        <Generator>ResXFileCodeGenerator</Generator>
+        <LastGenOutput>AppResources.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+      <EmbeddedResource Update="Resources\Lang\AppResources.en.resx">
+        <Generator>ResXFileCodeGenerator</Generator>
+        <LastGenOutput>AppResources.en.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+      <EmbeddedResource Update="Resources\Lang\AppResources.fr.resx">
+        <Generator>ResXFileCodeGenerator</Generator>
+        <LastGenOutput>AppResources.fr.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Update="Resources\Lang\AppResources.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>AppResources.resx</DependentUpon>
+      </Compile>
+      <Compile Update="Resources\Lang\AppResources.en.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>AppResources.en.resx</DependentUpon>
+      </Compile>
+      <Compile Update="Resources\Lang\AppResources.fr.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>AppResources.fr.resx</DependentUpon>
+      </Compile>
+      <Compile Update="Posts\Lists\PostListPage.xaml.cs">
+        <DependentUpon>PostListPage.xaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="Posts\Lists\PostListPage.xaml.cs">
+        <DependentUpon>TodoItemListPage.xaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="Posts\Templates\PostListTemplate.xaml.cs">
+        <DependentUpon>TodoItemListTemplate.xaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="Posts\Details\PostDetailsPage.xaml.cs">
+        <DependentUpon>PostListPage.xaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="Posts\Lists\Templates\PostListTemplate.xaml.cs">
+        <DependentUpon>PostListTemplate.xaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="Posts\Details\Templates\CommentListTemplate.xaml.cs">
+        <DependentUpon>PostListTemplate.xaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="Posts\Details\Templates\PostListTemplate.xaml.cs">
+        <DependentUpon>PostListTemplate.xaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+    </ItemGroup>
+</Project>

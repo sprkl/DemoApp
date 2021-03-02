@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:extensions="http://xamarin.com/schemas/2020/toolkit"
+             xmlns:templates="clr-namespace:DemoApp.Posts.Details.Templates;assembly=DemoApp"
+             xmlns:templates1="clr-namespace:DemoApp.Posts.Lists.Templates;assembly=DemoApp"
+             x:Class="DemoApp.Posts.Details.PostDetailsPage"
+             BindingContext="{Binding PostDetailsViewModel, Source={StaticResource ViewModelLocator}}"
+             Title="{extensions:Translate Title_PostDetailsPage}">
+
+    <RefreshView
+        Command="{Binding RefreshPageAsyncCommand}">
+
+        <CollectionView
+            SelectionMode="None"
+            ItemsSource="{Binding Comments}"
+            ItemsUpdatingScrollMode="KeepScrollOffset"
+            ItemSizingStrategy="MeasureAllItems">
+            
+            <CollectionView.Header>
+                <StackLayout Orientation="Vertical">
+                    <templates1:PostListTemplate BindingContext="{Binding Post}"/>
+                    <BoxView Color="LightGray" HeightRequest="1" HorizontalOptions="Center" VerticalOptions="Start" WidthRequest="100"/>
+                </StackLayout>
+
+            </CollectionView.Header>
+
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <templates:CommentListTemplate />
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+
+            <CollectionView.EmptyView>
+                <FlexLayout
+                    Direction="Column"
+                    AlignItems="Center"
+                    JustifyContent="Center"
+                    extensions:StateLayout.CurrentState="{Binding CommentListState}">
+                    <extensions:StateLayout.StateViews>
+                        <extensions:StateView StateKey="Loading">
+                            <ActivityIndicator IsRunning="True" Color="DodgerBlue"/>
+                        </extensions:StateView>
+
+                        <extensions:StateView StateKey="Empty">
+                            <Label Text="{extensions:Translate NoListDataAvailable}" />
+                        </extensions:StateView>
+                    </extensions:StateLayout.StateViews>
+                </FlexLayout>
+            </CollectionView.EmptyView>
+        </CollectionView>
+    </RefreshView>
+</ContentPage>
