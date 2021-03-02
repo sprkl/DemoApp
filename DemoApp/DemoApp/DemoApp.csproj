@@ -77,9 +77,29 @@
         <DependentUpon>PostListTemplate.xaml</DependentUpon>
         <SubType>Code</SubType>
       </Compile>
-    </ItemGroup>
-
-    <ItemGroup>
-      <Folder Include="Features" />
+      <Compile Update="Features\Settings\Details\Templates\CommentListTemplate.xaml.cs">
+        <DependentUpon>CommentListTemplate.xaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="Features\Settings\Details\SettingDetailsPage.xaml.cs">
+        <DependentUpon>PostDetailsPage.xaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="Features\Settings\Lists\Templates\SettingListTemplate.xaml.cs">
+        <DependentUpon>SettingListTemplate.xaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="Features\Settings\Lists\Templates\SettingListTemplate.xaml.cs">
+        <DependentUpon>PostListTemplate.xaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="Features\Settings\Lists\SettingListPage.xaml.cs">
+        <DependentUpon>SettingListPage.xaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="Features\Settings\Lists\SettingListPage.xaml.cs">
+        <DependentUpon>PostListPage.xaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
     </ItemGroup>
 </Project>

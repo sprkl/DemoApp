@@ -61,11 +61,56 @@ namespace DemoApp.Resources.Lang {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Sombre.
+        /// </summary>
+        internal static string DarkThemeOption_AppSettingsPage {
+            get {
+                return ResourceManager.GetString("DarkThemeOption_AppSettingsPage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Par défaut.
+        /// </summary>
+        internal static string DefaultThemeOption_AppSettingsPage {
+            get {
+                return ResourceManager.GetString("DefaultThemeOption_AppSettingsPage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Clair.
+        /// </summary>
+        internal static string LightThemeOption_AppSettingsPage {
+            get {
+                return ResourceManager.GetString("LightThemeOption_AppSettingsPage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Aucune donnée disponible.
         /// </summary>
         internal static string NoListDataAvailable {
             get {
                 return ResourceManager.GetString("NoListDataAvailable", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Thème de l&apos;app.
+        /// </summary>
+        internal static string ThemeLabelOption_AppSettingsPage {
+            get {
+                return ResourceManager.GetString("ThemeLabelOption_AppSettingsPage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Options.
+        /// </summary>
+        internal static string Title_AppSettingsPage {
+            get {
+                return ResourceManager.GetString("Title_AppSettingsPage", resourceCulture);
             }
         }
         

@@ -1,6 +1,7 @@
 ﻿using Autofac;
 using DemoApp.Features.Posts.Details;
 using DemoApp.Features.Posts.Lists;
+using DemoApp.Features.Settings.AppSettings;
 using DemoApp.HttpServices;
 using DemoApp.Services.Navigations;
 
@@ -44,6 +45,7 @@ namespace DemoApp
 
         private static ContainerBuilder RegisterViewModels(ContainerBuilder builder)
         {
+            builder.RegisterType<AppSettingsViewModel>();
             builder.RegisterType<PostListViewModel>().SingleInstance();
             builder.RegisterType<PostDetailsViewModel>().SingleInstance();
             return builder;

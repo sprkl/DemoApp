@@ -61,11 +61,56 @@ namespace DemoApp.Resources.Lang {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Dark.
+        /// </summary>
+        internal static string DarkThemeOption_AppSettingsPage {
+            get {
+                return ResourceManager.GetString("DarkThemeOption_AppSettingsPage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Default.
+        /// </summary>
+        internal static string DefaultThemeOption_AppSettingsPage {
+            get {
+                return ResourceManager.GetString("DefaultThemeOption_AppSettingsPage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Light.
+        /// </summary>
+        internal static string LightThemeOption_AppSettingsPage {
+            get {
+                return ResourceManager.GetString("LightThemeOption_AppSettingsPage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to No data available.
         /// </summary>
         internal static string NoListDataAvailable {
             get {
                 return ResourceManager.GetString("NoListDataAvailable", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to App theme.
+        /// </summary>
+        internal static string ThemeLabelOption_AppSettingsPage {
+            get {
+                return ResourceManager.GetString("ThemeLabelOption_AppSettingsPage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Settings.
+        /// </summary>
+        internal static string Title_AppSettingsPage {
+            get {
+                return ResourceManager.GetString("Title_AppSettingsPage", resourceCulture);
             }
         }
         

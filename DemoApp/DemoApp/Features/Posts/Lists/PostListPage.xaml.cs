@@ -1,4 +1,5 @@
-﻿using DemoApp.Commons.Views;
+﻿using System;
+using DemoApp.Commons.Views;
 using Xamarin.Forms.Xaml;
 
 namespace DemoApp.Features.Posts.Lists

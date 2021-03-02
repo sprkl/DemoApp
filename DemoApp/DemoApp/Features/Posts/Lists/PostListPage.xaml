@@ -8,6 +8,10 @@
              BindingContext="{Binding PostListViewModel, Source={StaticResource ViewModelLocator}}"
              Title="{extensions:Translate Title_PostListPage}">
 
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="⚙" Command="{Binding ShowSettingsCommand}"/>
+    </ContentPage.ToolbarItems>
+    
     <StackLayout Orientation="Vertical">
         <RefreshView
             Command="{Binding RefreshPostsAsyncCommand}">

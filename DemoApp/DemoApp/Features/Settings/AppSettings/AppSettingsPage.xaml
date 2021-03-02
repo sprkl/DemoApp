@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:extensions="http://xamarin.com/schemas/2020/toolkit"
+             x:Class="DemoApp.Features.Settings.AppSettings.AppSettingsPage"
+             BindingContext="{Binding AppSettingsViewModel, Source={StaticResource ViewModelLocator}}"
+             Title="{extensions:Translate Title_AppSettingsPage}">
+
+    <StackLayout Orientation="Vertical">
+        <Label
+            Text="{extensions:Translate ThemeLabelOption_AppSettingsPage}"
+            HorizontalOptions="FillAndExpand"/>
+        
+        <StackLayout Orientation="Horizontal">
+            <Label
+                Text="{extensions:Translate DefaultThemeOption_AppSettingsPage}"
+                HorizontalOptions="FillAndExpand"/>
+            
+            <RadioButton
+                GroupName="AppThemeGroup"
+                IsChecked="{Binding UseDeviceThemeSettings}"/>
+        </StackLayout>
+        
+        <StackLayout Orientation="Horizontal">
+            <Label
+                Text="{extensions:Translate LightThemeOption_AppSettingsPage}"
+                HorizontalOptions="FillAndExpand"/>
+            
+            <RadioButton
+                GroupName="AppThemeGroup"
+                IsChecked="{Binding UseLightMode}"/>
+        </StackLayout>
+        
+        <StackLayout Orientation="Horizontal">
+            <Label
+                Text="{extensions:Translate DarkThemeOption_AppSettingsPage}"
+                HorizontalOptions="FillAndExpand"/>
+            
+            <RadioButton
+                GroupName="AppThemeGroup"
+                IsChecked="{Binding UseDarkMode}"/>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

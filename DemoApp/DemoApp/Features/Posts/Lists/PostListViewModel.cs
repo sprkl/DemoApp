@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using DemoApp.Commons.ViewModels;
 using DemoApp.Features.Posts.Details;
+using DemoApp.Features.Settings.AppSettings;
 using DemoApp.HttpServices.Posts;
 using DemoApp.Models;
 using DemoApp.Services.Navigations;
@@ -28,6 +29,7 @@ namespace DemoApp.Features.Posts.Lists
 
         public AsyncCommand RefreshPostsAsyncCommand { get; }
         public AsyncCommand<Post> SelectedPostAsyncCommand { get; }
+        public AsyncCommand ShowSettingsCommand { get; }
 
         public PostListViewModel(IPostService postService, INavigationService navigationService)
         {
@@ -37,6 +39,7 @@ namespace DemoApp.Features.Posts.Lists
             Posts = new ObservableRangeCollection<Post>();
             RefreshPostsAsyncCommand = new AsyncCommand(ListPostAsync, allowsMultipleExecutions: false);
             SelectedPostAsyncCommand = new AsyncCommand<Post>(ShowPostDetailsAsync, allowsMultipleExecutions: false);
+            ShowSettingsCommand = new AsyncCommand(ShowSettingsAsync, allowsMultipleExecutions: false);
         }
 
         public Task InitializeAsync()
@@ -62,6 +65,11 @@ namespace DemoApp.Features.Posts.Lists
         {
             var viewModelParams = new PostDetailsViewModelParams(post.Id);
             return _navigationService.NavigateAsync<PostDetailsPage, PostDetailsViewModelParams>(viewModelParams);
+        }
+
+        private Task ShowSettingsAsync()
+        {
+            return _navigationService.NavigateAsync<AppSettingsPage>();
         }
 
         private async Task<List<Post>> GetPostsAsync()

@@ -1,6 +1,8 @@
 ﻿using Autofac;
 using DemoApp.Features.Posts.Lists;
+using DemoApp.Features.Settings.AppSettings;
 using DemoApp.Resources.Lang;
+using DemoApp.Services.AppThemes;
 using DemoApp.Services.Navigations;
 using Xamarin.CommunityToolkit.Helpers;
 using Xamarin.Forms.Xaml;
@@ -16,6 +18,7 @@ namespace DemoApp
         {
             InitializeComponent();
             
+            AppThemeSettings.Initialize();
             LocalizationResourceManager.Current.Init(AppResources.ResourceManager);
 
             DependencyInjection.Initialize();

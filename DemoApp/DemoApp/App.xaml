@@ -1,12 +1,45 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
+
 <Application xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:viewModels="clr-namespace:DemoApp.Commons.ViewModels;assembly=DemoApp"
              xmlns:converters="clr-namespace:DemoApp.Commons.Converters;assembly=DemoApp"
              x:Class="DemoApp.App">
-    
+
     <Application.Resources>
         <viewModels:ViewModelLocator x:Key="ViewModelLocator" />
         <converters:TextToInitialConverter x:Key="TextToInitialConverter" />
+        <converters:EqualsConverter x:Key="EqualsConverter" />
+
+        <ResourceDictionary>
+            <Color x:Key="LightBackgroundColor">White</Color>
+            <Color x:Key="LightNavigationBarColor">DodgerBlue</Color>
+            <Color x:Key="LightNavigationBarTextColor">White</Color>
+            <Color x:Key="LightTextColor">Black</Color>
+        
+            <Color x:Key="DarkBackgroundColor">Gray</Color>
+            <Color x:Key="DarkNavigationBarColor">DimGray</Color>
+            <Color x:Key="DarkNavigationBarTextColor">DarkGray</Color>
+            <Color x:Key="DarkTextColor">LightGray</Color>
+            
+            <Style TargetType="{x:Type ContentPage}">
+                <Setter Property="BackgroundColor" 
+                        Value="{AppThemeBinding {StaticResource LightBackgroundColor}, 
+                        Light={StaticResource LightBackgroundColor},
+                        Dark={StaticResource DarkBackgroundColor}}" />
+            </Style>
+            
+            <Style TargetType="{x:Type NavigationPage}">
+                <Setter Property="BarBackgroundColor"
+                        Value="{AppThemeBinding {StaticResource LightNavigationBarColor}, 
+                        Light={StaticResource LightNavigationBarColor},
+                        Dark={StaticResource DarkNavigationBarColor}}" />
+                
+                <Setter Property="BarTextColor"
+                        Value="{AppThemeBinding {StaticResource LightNavigationBarTextColor}, 
+                        Light={StaticResource LightNavigationBarTextColor},
+                        Dark={StaticResource DarkNavigationBarTextColor}}" />
+            </Style>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>
