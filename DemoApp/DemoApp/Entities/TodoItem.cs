@@ -1,4 +1,4 @@
-﻿namespace DemoApp.Domain.Entities
+﻿namespace DemoApp.Entities
 {
     public class TodoItem
     {

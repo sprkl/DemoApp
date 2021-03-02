@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using DemoApp.Application.HttpServices.Comments;
-using DemoApp.Application.HttpServices.Posts;
 using DemoApp.Commons.ViewModels;
-using DemoApp.Domain.Entities;
+using DemoApp.Entities;
+using DemoApp.HttpServices.Comments;
+using DemoApp.HttpServices.Posts;
 using Xamarin.CommunityToolkit.ObjectModel;
 using Xamarin.CommunityToolkit.UI.Views;
 

@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using DemoApp.Application.HttpServices.Posts;
 using DemoApp.Commons.ViewModels;
-using DemoApp.Domain.Entities;
+using DemoApp.Entities;
+using DemoApp.HttpServices.Posts;
 using DemoApp.Posts.Details;
 using DemoApp.Services.Navigations;
 using Xamarin.CommunityToolkit.ObjectModel;

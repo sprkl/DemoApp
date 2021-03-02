@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
-using DemoApp.Domain.Entities;
+using DemoApp.Entities;
 using Refit;
 
-namespace DemoApp.Application.HttpServices.Posts
+namespace DemoApp.HttpServices.Posts
 {
     public interface IPostService
     {

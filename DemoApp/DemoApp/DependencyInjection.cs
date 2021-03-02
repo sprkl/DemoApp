@@ -1,5 +1,5 @@
 ﻿using Autofac;
-using DemoApp.Application.HttpServices;
+using DemoApp.HttpServices;
 using DemoApp.Posts.Details;
 using DemoApp.Posts.Lists;
 using DemoApp.Services.Navigations;

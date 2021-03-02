@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Net.Http;
-using DemoApp.Application.HttpServices.Comments;
-using DemoApp.Application.HttpServices.Posts;
+using DemoApp.HttpServices.Comments;
+using DemoApp.HttpServices.Posts;
 using Refit;
 
-namespace DemoApp.Application.HttpServices
+namespace DemoApp.HttpServices
 {
     public class ServiceLocator
     {
