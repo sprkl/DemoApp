@@ -3,9 +3,9 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:extensions="http://xamarin.com/schemas/2020/toolkit"
              xmlns:templates="clr-namespace:DemoApp.Posts.Lists.Templates;assembly=DemoApp"
+             xmlns:lists="clr-namespace:DemoApp.Posts.Lists;assembly=DemoApp"
              x:Class="DemoApp.Posts.Lists.PostListPage"
              BindingContext="{Binding PostListViewModel, Source={StaticResource ViewModelLocator}}"
-             x:Name="This"
              Title="{extensions:Translate Title_PostListPage}">
 
     <StackLayout Orientation="Vertical">
@@ -23,7 +23,7 @@
                         <templates:PostListTemplate>
                             <templates:PostListTemplate.GestureRecognizers>
                                 <TapGestureRecognizer
-                                    Command="{Binding Source={x:Reference This}, Path=BindingContext.SelectedPostAsyncCommand}"
+                                    Command="{Binding SelectedPostAsyncCommand, Source={RelativeSource AncestorType={x:Type lists:PostListViewModel}}}"
                                     CommandParameter="{Binding}" />
                             </templates:PostListTemplate.GestureRecognizers>
                         </templates:PostListTemplate>
