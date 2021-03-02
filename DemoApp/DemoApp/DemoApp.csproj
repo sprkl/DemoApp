@@ -12,6 +12,7 @@
 
     <ItemGroup>
         <PackageReference Include="Autofac" Version="6.1.0" />
+        <PackageReference Include="Com.Airbnb.Xamarin.Forms.Lottie" Version="4.0.8" />
         <PackageReference Include="Refit" Version="6.0.24" />
         <PackageReference Include="Xamarin.CommunityToolkit" Version="1.1.0-pre1" />
         <PackageReference Include="Xamarin.Essentials" Version="1.6.1" />

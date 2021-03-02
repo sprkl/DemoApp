@@ -107,6 +107,9 @@
     <Reference Include="Xamarin.iOS" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="Com.Airbnb.Xamarin.Forms.Lottie">
+      <Version>4.0.8</Version>
+    </PackageReference>
     <PackageReference Include="Xamarin.CommunityToolkit" Version="1.1.0-pre1" />
     <PackageReference Include="Xamarin.Essentials">
       <Version>1.6.1</Version>

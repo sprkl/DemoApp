@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:xtc="http://xamarin.com/schemas/2020/toolkit"
+             xmlns:xtc="http://xamarin.com/schemas/2020/toolkit" xmlns:forms="clr-namespace:Lottie.Forms;assembly=Lottie.Forms"
              x:Class="DemoApp.Features.Account.Login.LoginPage"
              BindingContext="{Binding LoginViewModel, Source={StaticResource ViewModelLocator}}"
              Title="Test">
@@ -13,37 +13,49 @@
     </ContentPage.Resources>
 
     <ContentPage.Content>
-        <StackLayout VerticalOptions="Center" Margin="20">
-            <Label Text="{xtc:Translate Account_Login_Subtitle}"
-                   VerticalOptions="Center"
-                HorizontalOptions="CenterAndExpand" />
+        <Grid>
+            <StackLayout IsVisible="{Binding IsLoading}" 
+                         VerticalOptions="Center" Margin="20">
 
-            <Entry VerticalOptions="Center" 
-                   IsSpellCheckEnabled="False"
-                   Keyboard="Email"
-                   Completed="Entry_Completed"
-                   x:Name="Email_Entry"
-                   Text="{Binding Email}"
-                   Placeholder="{xtc:Translate Account_Login_Email}" />
+                <forms:AnimationView
+                    x:Name="animationView"
+                    Animation="lottie-login.json"
+                    RepeatMode="Infinite"
+                    WidthRequest="100"
+                    HeightRequest="100"/>
+                
+            </StackLayout>
+            <StackLayout IsVisible="{Binding IsLoading, Converter={StaticResource invertedBool}}" 
+                         VerticalOptions="Center" Margin="20">
 
-            <Entry VerticalOptions="Center" 
-                   IsPassword="True"
-                   x:Name="Password_Entry"
-                   Text="{Binding Password}"
-                   Placeholder="{xtc:Translate Account_Login_Password}" >
-                <Entry.Behaviors >
-                    <xtc:EventToCommandBehavior EventName="Completed" Command="{Binding OnLoginSubmitCommand}" />
-                </Entry.Behaviors>
-            </Entry>
+                <Label Text="{xtc:Translate Account_Login_Subtitle}"
+                       VerticalOptions="Center"
+                    HorizontalOptions="CenterAndExpand" />
+
+                <Entry VerticalOptions="Center" 
+                       IsSpellCheckEnabled="False"
+                       Keyboard="Email"
+                       Completed="Entry_Completed"
+                       x:Name="Email_Entry"
+                       Text="{Binding Email}"
+                       Placeholder="{xtc:Translate Account_Login_Email}" />
+
+                <Entry VerticalOptions="Center" 
+                       IsPassword="True"
+                       x:Name="Password_Entry"
+                       Text="{Binding Password}"
+                       Placeholder="{xtc:Translate Account_Login_Password}" >
+                    <Entry.Behaviors >
+                        <xtc:EventToCommandBehavior EventName="Completed" Command="{Binding OnLoginSubmitCommand}" />
+                    </Entry.Behaviors>
+                </Entry>
 
 
-            <Button Text="{xtc:Translate Account_Login_Submit}" 
-                    IsVisible="{Binding IsLoading, Converter={StaticResource invertedBool}}"
-                    Command="{Binding OnLoginSubmitCommand}"  />
+                <Button Text="{xtc:Translate Account_Login_Submit}" 
+                        IsVisible="{Binding IsLoading, Converter={StaticResource invertedBool}}"
+                        Command="{Binding OnLoginSubmitCommand}"  />
 
-
-            <ActivityIndicator IsRunning="{Binding IsLoading}"  />
-            
-        </StackLayout>
+            </StackLayout>
+        </Grid>
     </ContentPage.Content>
 </ContentPage>
