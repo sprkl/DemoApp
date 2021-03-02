@@ -1,11 +1,11 @@
 ﻿using Xamarin.Forms.Xaml;
 
-namespace DemoApp.Posts.Lists.Templates
+namespace DemoApp.Features.Posts.Details.Templates
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class PostListTemplate
+    public partial class CommentListTemplate
     {
-        public PostListTemplate()
+        public CommentListTemplate()
         {
             InitializeComponent();
         }

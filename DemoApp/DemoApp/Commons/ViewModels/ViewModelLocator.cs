@@ -1,7 +1,7 @@
 ﻿using Autofac;
+using DemoApp.Features.Posts.Details;
+using DemoApp.Features.Posts.Lists;
 using DemoApp.Features.Account.Login;
-using DemoApp.Posts.Details;
-using DemoApp.Posts.Lists;
 
 namespace DemoApp.Commons.ViewModels
 {

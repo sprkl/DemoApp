@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
-using DemoApp.Entities;
+using DemoApp.Models;
 using Refit;
 
 namespace DemoApp.HttpServices.Posts

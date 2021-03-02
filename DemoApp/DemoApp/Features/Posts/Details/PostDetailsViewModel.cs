@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using DemoApp.Commons.ViewModels;
-using DemoApp.Entities;
 using DemoApp.HttpServices.Comments;
 using DemoApp.HttpServices.Posts;
+using DemoApp.Models;
 using Xamarin.CommunityToolkit.ObjectModel;
 using Xamarin.CommunityToolkit.UI.Views;
 
-namespace DemoApp.Posts.Details
+namespace DemoApp.Features.Posts.Details
 {
     public class PostDetailsViewModelParams : IViewModelParams
     {

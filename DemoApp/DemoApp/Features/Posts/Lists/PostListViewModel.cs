@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using DemoApp.Commons.ViewModels;
-using DemoApp.Entities;
+using DemoApp.Features.Posts.Details;
 using DemoApp.HttpServices.Posts;
-using DemoApp.Posts.Details;
+using DemoApp.Models;
 using DemoApp.Services.Navigations;
 using Xamarin.CommunityToolkit.ObjectModel;
 using Xamarin.CommunityToolkit.UI.Views;
 
-namespace DemoApp.Posts.Lists
+namespace DemoApp.Features.Posts.Lists
 {
     public class PostListViewModel : ObservableObject, IViewModel
     {

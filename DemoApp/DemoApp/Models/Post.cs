@@ -1,4 +1,4 @@
-﻿namespace DemoApp.Entities
+﻿namespace DemoApp.Models
 {
     public class Post
     {

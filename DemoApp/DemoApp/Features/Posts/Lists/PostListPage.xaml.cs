@@ -1,7 +1,7 @@
 ﻿using DemoApp.Commons.Views;
 using Xamarin.Forms.Xaml;
 
-namespace DemoApp.Posts.Lists
+namespace DemoApp.Features.Posts.Lists
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class PostListPage : IView

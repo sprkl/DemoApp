@@ -2,9 +2,9 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:extensions="http://xamarin.com/schemas/2020/toolkit"
-             xmlns:templates="clr-namespace:DemoApp.Posts.Lists.Templates;assembly=DemoApp"
-             xmlns:lists="clr-namespace:DemoApp.Posts.Lists;assembly=DemoApp"
-             x:Class="DemoApp.Posts.Lists.PostListPage"
+             xmlns:templates="clr-namespace:DemoApp.Features.Posts.Lists.Templates;assembly=DemoApp"
+             xmlns:lists="clr-namespace:DemoApp.Features.Posts.Lists;assembly=DemoApp"
+             x:Class="DemoApp.Features.Posts.Lists.PostListPage"
              BindingContext="{Binding PostListViewModel, Source={StaticResource ViewModelLocator}}"
              Title="{extensions:Translate Title_PostListPage}">
 

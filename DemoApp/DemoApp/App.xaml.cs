@@ -1,6 +1,6 @@
 ﻿using Autofac;
+using DemoApp.Features.Posts.Lists;
 using DemoApp.Features.Account.Login;
-using DemoApp.Posts.Lists;
 using DemoApp.Resources.Lang;
 using DemoApp.Services.Navigations;
 using Xamarin.CommunityToolkit.Helpers;

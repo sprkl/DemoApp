@@ -83,6 +83,6 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Features\Splashscreen\" />
+      <Folder Include="Features" />
     </ItemGroup>
 </Project>
