@@ -3,9 +3,9 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:extensions="http://xamarin.com/schemas/2020/toolkit"
-             xmlns:templates="clr-namespace:DemoApp.Posts.Details.Templates;assembly=DemoApp"
-             xmlns:templates1="clr-namespace:DemoApp.Posts.Lists.Templates;assembly=DemoApp"
-             x:Class="DemoApp.Posts.Details.PostDetailsPage"
+             xmlns:templates="clr-namespace:DemoApp.Features.Posts.Lists.Templates;assembly=DemoApp"
+             xmlns:templates1="clr-namespace:DemoApp.Features.Posts.Details.Templates;assembly=DemoApp"
+             x:Class="DemoApp.Features.Posts.Details.PostDetailsPage"
              BindingContext="{Binding PostDetailsViewModel, Source={StaticResource ViewModelLocator}}"
              Title="{extensions:Translate Title_PostDetailsPage}">
 
@@ -20,7 +20,7 @@
             
             <CollectionView.Header>
                 <StackLayout Orientation="Vertical">
-                    <templates1:PostListTemplate BindingContext="{Binding Post}"/>
+                    <templates:PostListTemplate BindingContext="{Binding Post}"/>
                     <BoxView Color="LightGray" HeightRequest="1" HorizontalOptions="Center" VerticalOptions="Start" WidthRequest="100"/>
                 </StackLayout>
 
@@ -28,7 +28,7 @@
 
             <CollectionView.ItemTemplate>
                 <DataTemplate>
-                    <templates:CommentListTemplate />
+                    <templates1:CommentListTemplate />
                 </DataTemplate>
             </CollectionView.ItemTemplate>
 

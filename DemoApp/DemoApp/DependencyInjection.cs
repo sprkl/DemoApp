@@ -1,7 +1,7 @@
 ﻿using Autofac;
+using DemoApp.Features.Posts.Details;
+using DemoApp.Features.Posts.Lists;
 using DemoApp.HttpServices;
-using DemoApp.Posts.Details;
-using DemoApp.Posts.Lists;
 using DemoApp.Services.Navigations;
 
 namespace DemoApp

@@ -1,6 +1,6 @@
 ﻿using Autofac;
-using DemoApp.Posts.Details;
-using DemoApp.Posts.Lists;
+using DemoApp.Features.Posts.Details;
+using DemoApp.Features.Posts.Lists;
 
 namespace DemoApp.Commons.ViewModels
 {
