@@ -1,5 +1,5 @@
 ﻿using DemoApp.Commons.ViewModels;
-using DemoApp.Posts.Lists;
+using DemoApp.Features.Posts.Lists;
 using DemoApp.Services.Navigations;
 using System;
 using System.Threading.Tasks;
