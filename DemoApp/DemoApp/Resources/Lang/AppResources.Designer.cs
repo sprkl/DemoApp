@@ -19,7 +19,7 @@ namespace DemoApp.Resources.Lang {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class AppResources {
@@ -57,6 +57,51 @@ namespace DemoApp.Resources.Lang {
             }
             set {
                 resourceCulture = value;
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Votre email.
+        /// </summary>
+        internal static string Account_Login_Email {
+            get {
+                return ResourceManager.GetString("Account_Login_Email", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Votre mot de passe.
+        /// </summary>
+        internal static string Account_Login_Password {
+            get {
+                return ResourceManager.GetString("Account_Login_Password", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Se connecter.
+        /// </summary>
+        internal static string Account_Login_Submit {
+            get {
+                return ResourceManager.GetString("Account_Login_Submit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Connectez-vous.
+        /// </summary>
+        internal static string Account_Login_Subtitle {
+            get {
+                return ResourceManager.GetString("Account_Login_Subtitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Bienvenue.
+        /// </summary>
+        internal static string Account_Login_Title {
+            get {
+                return ResourceManager.GetString("Account_Login_Title", resourceCulture);
             }
         }
         

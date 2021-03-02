@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xtc="http://xamarin.com/schemas/2020/toolkit"
+             x:Class="DemoApp.Features.Account.Login.LoginPage"
+             BindingContext="{Binding LoginViewModel, Source={StaticResource ViewModelLocator}}"
+             Title="Test">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <xtc:InvertedBoolConverter x:Key="invertedBool" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="Center" Margin="20">
+            <Label Text="{xtc:Translate Account_Login_Subtitle}"
+                   VerticalOptions="Center"
+                HorizontalOptions="CenterAndExpand" />
+
+            <Entry VerticalOptions="Center" 
+                   IsSpellCheckEnabled="False"
+                   Keyboard="Email"
+                   Completed="Entry_Completed"
+                   x:Name="Email_Entry"
+                   Text="{Binding Email}"
+                   Placeholder="{xtc:Translate Account_Login_Email}" />
+
+            <Entry VerticalOptions="Center" 
+                   IsPassword="True"
+                   x:Name="Password_Entry"
+                   Text="{Binding Password}"
+                   Placeholder="{xtc:Translate Account_Login_Password}" >
+                <Entry.Behaviors >
+                    <xtc:EventToCommandBehavior EventName="Completed" Command="{Binding OnLoginSubmitCommand}" />
+                </Entry.Behaviors>
+            </Entry>
+
+
+            <Button Text="{xtc:Translate Account_Login_Submit}" 
+                    IsVisible="{Binding IsLoading, Converter={StaticResource invertedBool}}"
+                    Command="{Binding OnLoginSubmitCommand}"  />
+
+
+            <ActivityIndicator IsRunning="{Binding IsLoading}"  />
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

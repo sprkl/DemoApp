@@ -1,4 +1,5 @@
 ﻿using Autofac;
+using DemoApp.Features.Account.Login;
 using DemoApp.HttpServices;
 using DemoApp.Posts.Details;
 using DemoApp.Posts.Lists;
@@ -36,6 +37,7 @@ namespace DemoApp
         private static ContainerBuilder RegisterHttpServices(ContainerBuilder builder)
         {
             var serviceLocator = new ServiceLocator();
+
             builder.Register(c => serviceLocator.PostService);
             builder.Register(c => serviceLocator.CommentService);
 
@@ -44,8 +46,11 @@ namespace DemoApp
 
         private static ContainerBuilder RegisterViewModels(ContainerBuilder builder)
         {
+            builder.RegisterType<LoginViewModel>().SingleInstance();
+
             builder.RegisterType<PostListViewModel>().SingleInstance();
             builder.RegisterType<PostDetailsViewModel>().SingleInstance();
+            
             return builder;
         }
     }

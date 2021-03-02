@@ -1,4 +1,5 @@
 ﻿using Autofac;
+using DemoApp.Features.Account.Login;
 using DemoApp.Posts.Lists;
 using DemoApp.Resources.Lang;
 using DemoApp.Services.Navigations;
@@ -22,7 +23,7 @@ namespace DemoApp
             Container = DependencyInjection.GetContainer();
 
             var navigationService = Container.Resolve<INavigationService>();
-            navigationService.NavigateAsync<PostListPage>();
+            navigationService.NavigateAsync<LoginPage>();
         }
 
         protected override void OnStart()
