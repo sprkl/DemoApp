@@ -1,6 +1,9 @@
 ﻿using Android.App;
 using Android.Content.PM;
 using Android.OS;
+using DemoApp.Droid.Services;
+using DemoApp.Services.Hello;
+using Xamarin.Forms;
 
 namespace DemoApp.Droid
 {
@@ -12,10 +15,13 @@ namespace DemoApp.Droid
         {
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
-
+            
             base.OnCreate(savedInstanceState);
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             Xamarin.Forms.Forms.Init(this, savedInstanceState);
+            
+            DependencyService.Register<HelloService>();
+
             LoadApplication(new App());
         }
         

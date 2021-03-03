@@ -1,8 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using DemoApp.iOS.Services;
+using DemoApp.Services.Hello;
 using Foundation;
 using UIKit;
+using Xamarin.Forms;
 
 namespace DemoApp.iOS
 {
@@ -22,6 +25,9 @@ namespace DemoApp.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             global::Xamarin.Forms.Forms.Init();
+            
+            DependencyService.Register<HelloService>();
+
             LoadApplication(new App());
 
             return base.FinishedLaunching(app, options);
